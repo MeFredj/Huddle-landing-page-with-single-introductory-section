@@ -1,0 +1,158 @@
+:root {
+  /* primary */
+  --violet: hsl(257, 40%, 49%);
+  /* fundamental */
+  --white: #fff;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 50px 80px 40px 80px;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--violet);
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: initial;
+  color: var(--white);
+  height: 900px;
+}
+
+header {
+  margin-bottom: 90px;
+}
+
+header img {
+  width: 200px;
+}
+
+.flex-container {
+  display: flex;
+  margin: 0;
+}
+
+.flex-right {
+  flex: 43%;
+}
+
+.flex-left {
+  flex: 57%;
+}
+
+.flex-item img {
+  width: 100%;
+}
+
+.flex-item {
+  align-self: flex-start;
+}
+
+.margin-left {
+  margin-left: 55px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Poppins", "Open Sans", sans-serif;
+  margin: 40px 0 20px 0;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: var(--white);
+  padding: 15px 70px;
+  border-radius: 30px;
+  border: none;
+  color: var(--violet);
+  font-size: 1.1rem;
+  font-family: "Poppins", "Open Sans", sans-serif;
+  -webkit-box-shadow: 4px 10px 26px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 4px 10px 26px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 10px 26px -2px rgba(0, 0, 0, 0.3);
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border: solid 1.5px var(--white);
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle i {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  margin-top: 15px;
+}
+
+@media all and (max-width: 800px) {
+  body {
+    background-image: url(/images/bg-mobile.svg);
+    margin: 37px 40px 40px 40px;
+  }
+
+  header {
+    margin-bottom: 55px;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+  }
+
+  .flex-end {
+    justify-content: center;
+  }
+
+  .margin-left {
+    margin-left: 0;
+  }
+
+  .flex-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  footer {
+    margin-top: 60px;
+  }
+
+  .circle {
+    height: 30px;
+    width: 30px;
+  }
+
+  .circle i {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
