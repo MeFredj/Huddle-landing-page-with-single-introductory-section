@@ -35,13 +35,18 @@ header img {
   flex: 43%;
 }
 
+.max-width-right {
+  max-width: 600px;
+}
+
 .flex-left {
   flex: 57%;
 }
 
 .flex-item img {
   width: 100%;
-}
+  max-width: 700px;
+}   
 
 .flex-item {
   align-self: flex-start;
@@ -104,9 +109,22 @@ footer {
   margin-top: 15px;
 }
 
+@media all and (max-width: 480px) {
+    footer {
+    margin-top: 60px;
+  }
+}
+
+@media all and (max-width: 800px) and (min-width: 481px) {
+  footer {
+    margin-top: 30px;
+  }
+}
+
 @media all and (max-width: 800px) {
   body {
     background-image: url(/images/bg-mobile.svg);
+    background-size: 100%;
     margin: 37px 40px 40px 40px;
   }
 
@@ -130,17 +148,30 @@ footer {
     margin-left: 0;
   }
 
+  .flex-left {
+    text-align: center;
+  }
+
   .flex-right {
     text-align: center;
     margin-top: 20px;
+    min-width: 300px;
+  }
+
+  .flex-item img {
+    width: 100%;
+    max-width: 450px;
+  }  
+
+  .max-width-right {
+    max-width: 375px;
+    margin: 0 auto;
   }
 
   h1 {
     font-size: 22px;
-  }
-
-  footer {
-    margin-top: 60px;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .circle {
@@ -156,3 +187,40 @@ footer {
     font-size: 16px;
   }
 }
+
+@media all and (max-width: 1050px) and (min-width: 800px) {
+  h1 {
+    margin-top: 0;
+  }
+
+  footer{
+    margin-top: 80px;
+  }
+
+  .flex-end {
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 1340px) and (min-width: 1194px) {
+  h1 { 
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 1193px) {
+  h1 { 
+    font-size: 20px;
+  }
+}
+
+
+@media all and (min-width: 1515px) {
+  .flex-right {
+    flex: 50%;
+  }
+  
+  .flex-left {
+    flex: 50%;
+    text-align: right;
+  }
